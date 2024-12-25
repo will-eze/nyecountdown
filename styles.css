@@ -48,6 +48,8 @@ body{
 
 .countdown-container{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-family: 'Noppalukemat', sans-serif;
     text-shadow: 4px 4px 50px black;
 }
