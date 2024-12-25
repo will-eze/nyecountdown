@@ -3,10 +3,24 @@ const hoursEL=document.getElementById('hours');
 const minsEL=document.getElementById('mins');
 const secondsEL=document.getElementById('secs');
 
-const newYears = '1 January 2024';
+// const newYears = '1 January 2025';
+
+const newYears = {
+    get date() {
+        const today = new Date();
+        const thisYear = new Date().getFullYear()
+        if (isFirstJanuary = today.getMonth() === 0 && today.getDate() === 1){
+            return "1 January " + (today.getFullYear())
+        } else {
+            return "1 January " + (thisYear + 1)
+        }
+    }
+}
+
+console.log(new Date())
 
 function countdown(){
-    const newYearsDate= new Date(newYears);
+    const newYearsDate= new Date(newYears.date);
     const currentDate = new Date();
 
     const totalseconds = (newYearsDate - currentDate)/1000;
