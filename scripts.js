@@ -10,8 +10,10 @@ const newYears = {
         const today = new Date();
         const thisYear = new Date().getFullYear()
         if (isFirstJanuary = today.getMonth() === 0 && today.getDate() === 1){
+            console.log("1 January " + (today.getFullYear()));
             return "1 January " + (today.getFullYear())
         } else {
+            console.log("1 January " + (thisYear + 1));
             return "1 January " + (thisYear + 1)
         }
     }
